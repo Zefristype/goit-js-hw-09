@@ -11,6 +11,7 @@ function onFormSubmit(e) {
   delay = Number(delay.value);
   step = Number(step.value);
   amount = Number(amount.value);
+  e.currentTarget.reset();
 
   for (let i = 1; i <= amount; i += 1) {
     createPromise(i, delay)
